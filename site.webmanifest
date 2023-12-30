@@ -1,6 +1,6 @@
 {
-  "name": "Silas Rodrigues - Portfólio",
-  "short_name": "Silas Rodrigues",
+  "name": "Mashilo Kgaladi - Portfolio",
+  "short_name": "Mashilo Kgaladi",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -17,7 +17,7 @@
   "start_url": "/index.html",
   "background_color": "#a0aec0",
   "display": "standalone",
-  "description": "Meu nome é Silas Rodrigues e eu desenvolvo aplicações web modernas com boas performances, boas práticas de programação, telas responsivas compatíveis com diferentes navegadores e configuração de SEO",
+  "description": "I'm Mashilo Kgaladi, a software engineer. Explore my modern web applications featuring high performance, good programming practices, responsive design, and SEO optimization.",
   "screenshots": [
     {
       "src": "/assets/img/preview.png",
