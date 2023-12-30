@@ -57,11 +57,11 @@
 			$mail->Port = 587; // Gmail default port (TLS Encryption) or $mail->Port = 587; $mail->SMTPSecure = 'ssl'; (SSL Encryption)
 
 			// Recipients
-			$mail->setFrom('silasrodrigues.fatec@gmail.com'); // Name optional example ('example@gmail.com', 'Your Name');
-			$mail->addAddress('silasrodrigues.fatec@gmail.com'); // Name optional example ('example@gmail.com', 'Your Name');
+			$mail->setFrom('Christophermashilo@gmail.com'); // Name optional example ('example@gmail.com', 'Your Name');
+			$mail->addAddress('christophermashilo@gmail.com'); // Name optional example ('example@gmail.com', 'Your Name');
 			$mail->addAddress('otherAdress.@domain.com'); // Name optional example ('example@domain.com', 'Your Name');
 
-			// Access the following link to more information -> https://gist.github.com/SilasRodrigues19/95ffd9e355d723c857501faf2ee99b9c
+			// Access the following link to more information -> https://gist.github.com/1Mashilo/95ffd9e355d723c857501faf2ee99b9c
 
 			// Content
 			$mail->isHTML(true); // Set HTML format
