@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Mashilo Kgaladi">
+    <meta name="title" content="Mashilo Kgaladi - Software Engineer - Programmer">
+    <meta name="description" content="My name is Mashilo Kgaladi, a passionate chemistry graduate and software engineering student. I specialize in developing modern web applications with a focus on good performance, programming best practices, and responsive layouts that are compatible with different browsers. As a freelancer and aspiring backend developer, I bring a unique blend of scientific curiosity and programming skills to create innovative solutions. Explore my portfolio to discover more about my journey in web development.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#470ba9">
+    <meta name="copyright" content="Mashilo Kgaladi 2023">
+    <meta http-equiv="cache-control" content="public">
+    <meta http-equiv="content-language" content="en">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords"
+        content="Mashilo Kgaladi, chemistry graduate, software engineering student, freelancer, aspiring backend developer">
+
+
+    <!-- Facebook Tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Mashilo Kgaladi - Software Engineering Student - backend">
+    <meta property="og:description" content="My name is Mashilo Kgaladi, and this is my portfolio with some of my personal study projects. I am a programmer developing web applications.">
+    <meta property="og:url" content="https://silasrodrigues.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Portfolio" />
+    <meta property="og:image" content="./assets/img/preview.png">
+    <meta property="og:image:width" content="1859" />
+    <meta property="og:image:height" content="884" />
+    <meta property="og:image:type" content="image/png" />
+
+    <!-- Twitter Tags -->
+    <meta property="twitter:creator" content="@Jinuye1">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://silasrodrigues.vercel.app">
+    <meta property="twitter:title" content="Mashilo Kgaladi - Software Engineering Student - backend">
+    <meta property="twitter:description" content="My name is Mashilo Kgaladi, and this is my portfolio with some of my personal study projects. I am a programmer developing web applications.">
+    <meta property="twitter:image" content="./assets/img/preview.png">
+
+    <title>Mashilo Kgaladi | Software Engineering Student</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?=v2">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png?=v2">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png?=v2">
+    <link rel="manifest" href="./site.webmanifest">
+    <link id="favicon" rel="shortcut icon" type="image/png" href="./favicon.ico?=v2">
+
+    <!-- My styles -->
+    <link rel="preload" href="./assets/css/main.css" as="style">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Google Fonts -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- JQuery Compatible with JQuery Mask-->
+    <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" as="script">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JQuery Validator -->
+    <script defer src="./assets/js/jquery.validate.min.js"></script>
+
+    <!-- Mask Plugin JQuery -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        as="script">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <!-- Form Validator -->
+    <link rel="preload" href="./assets/js/formvalidator.js" as="script">
+    <script defer src="./assets/js/formvalidator.js"></script>
+
+    <!-- Validator Messages -->
+    <link rel="preload" href="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/localization/messages_ptbr.js"
+        as="script">
+    <script defer src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/localization/messages_ptbr.js"></script>
+    <!-- Scripts need to be imported before </head> to resolve validation messages error -->
+    <link rel="canonical" href="https://silasrodrigues.vercel.app">
+
+    <!-- Hotjar Tracking Code for https://silasrodrigues.vercel.app -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 3379066, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+
+</head>
+
+<body ondragstart="false" class="body-theme">
+    <!-- Cabeçalho -->
+    <header id="header" aria-label="Site Header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#home" class="scroll" rel="noreferrer">
+                        <img class="logo" src="./assets/img/logo.svg" srcset="./assets/img/logo-large.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <!-- Menu Mobile -->
+                    <input autocomplete="off" id="hamburger" type="checkbox">
+                    <label for="hamburger">
+                        <div class="menu">
+                            <div class="bar bar1"></div>
+                            <div class="bar bar2"></div>
+                            <div class="bar bar3"></div>
+                        </div>
+                    </label>
+                    <ul id="mobileExpanded" role="menubar" aria-label="Mobile Menu">
+                        <li>
+                            <a class="scroll" href="#about" data-after="About" role="menuitem">About</a>
+                        </li>
+                        <li>
+                            <a class="scroll" href="#skills" data-after="Skills" role="menuitem">Skills</a>
+                        </li>
+                        <li>
+                            <a class="scroll" href="#projects" data-after="Projects" role="menuitem">Projects</a>
+                        </li>
+                        <li>
+                            <a class="scroll" href="#certificates" data-after="Courses" role="menuitem">Courses</a>
+                        </li>
+                        <li>
+                            <a class="scroll" href="#form" data-after="Contact" role="menuitem">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#theme-toggle" rel="noreferrer" aria-label="Change site theme" data-after="Theme"
+                                class="iconLink" role="menuitem">
+                                <i accesskey="x" class="bi bi-cloud-moon" id="theme-toggle"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Home Section -->
+   <section id="home" role="region" aria-label="Home Page">
+        <div class="wrapperLoader">
+            <div id="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="home container">
+            <div class="info container">
+                <h1 class="infoText">Hello,</h1>
+                <h1 class="infoText">Welcome</h1>
+                <h1 class="infoText">Explore my</h1>
+                <a href="#projects" type="button" class="cta scroll" aria-label="See my projects">
+                    <span class="iconify portfolioIcon" data-icon="line-md:arrow-down"></span> Portfolio
+                </a>
+                <h2 class="arrayText">I am <span class="typed-text"></span><span class="cursor typing">&nbsp;</span>
+                 </h2>
+            </div>
+            <div class="box">
+                <div class="imgBox">
+                    <a href="resume.pdf" target="_blank" aria-label="See my resume PDF">
+                        <img class="avatar" src="./assets/img/silas.webp" alt="Photo of Silas Rodrigues" loading="lazy">
+                    </a>
+                </div>
+                <div class="content">
+                    <p class="content-title">
+                        Mashilo Kgaladi
+                        <span>Software engineering Student</span>
+                        <span class="age"></span>
+                        <span>Sumaré - SP</span>
+                    </p>
+                </div>
+            </div>
+            <div class="rightArrow">
+                <span class="iconify" data-icon="flat-color-icons:down-right"></span>
+            </div>
+            <aside class="social" role="complementary" aria-label="Social Media">
+                <span class="socialBtn">
+                    <span class="socialText">Social</span>
+                </span>
+                <div class="iconsBox">
+                    <i>
+                        <a href="https://wa.me/0680418318" target="_blank" rel="noreferrer" aria-label="WhatsApp"
+                            accesskey="w">
+                            <span class="iconify whatsapp" data-icon="whh:whatsapp" data-inline="false"></span>
+                        </a>
+                    </i>
+                    <i>
+                        <a href="https://twitter.com/mashilo_Kgaladi" target="_blank" rel="noreferrer" aria-label="Twitter"
+                            accesskey="t">
+                            <span class="iconify twitter" data-icon="websymbol:twitter-bird" data-inline="false"></span>
+                        </a>
+                    </i>
+                    <i>
+                        <a href="https://www.linkedin.com/in/mashilo-kgaladi/" target="_blank" rel="noreferrer"
+                            aria-label="LinkedIn" accesskey="l">
+                            <span class="iconify linkedin" data-icon="line-md:linkedin"></span>
+                        </a>
+                    </i>
+                    <i>
+                        <a href="https://codepen.io/MashiloKgaladi" target="_blank" rel="noreferrer"
+                            aria-label="CodePen" accesskey="c">
+                            <span class="iconify codepen" data-icon="mdi:codepen" data-inline="false"></span>
+                        </a>
+                    </i>
+                    <i>
+                        <a href="https://github.com/1Mashilo" target="_blank" rel="noreferrer"
+                            aria-label="Github" accesskey="g">
+                            <span class="iconify github" data-icon="eva:github-fill" data-inline="false"></span>
+                        </a>
+                    </i>
+                </div>
+            </aside>
+        </div>
+    </section>
+    <!-- End Home Section -->
+
+    <!-- About Section -->
+    <section id="about" role="region" aria-labelledby="region-heading">
+        <div class="about container">
+            <div class="section-title">
+                <img data-aos="zoom-in-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1200"
+                    data-aos-easing="ease" src="./assets/img/about.svg" alt="Image of About" width="180" height="100">
+                <h1 data-aos="fade-down" id="region-heading"><span>About</span> me</h1>
+                <hr data-aos="fade-down">
+                <p data-aos="fade-up">Discover more about my journey through the sections below.</p>
+            </div>
+            <div class="boxInfo" data-aos="fade-up" data-aos-duration="900">
+                <ul role="tablist" aria-label="List of items with information about me">
+                    <li id="tab-one" role="presentation">
+                        <img src="./assets/img/about_me.svg" alt="Image representing about me" width="100" height="100">
+                        <h4>About</h4>
+                    </li>
+                    <li id="tab-two" role="presentation">
+                        <img src="./assets/img/education.svg" alt="Image representing graduation" width="100" height="100">
+                        <h4>Education</h4>
+                    </li>
+                    <li id="tab-three" role="presentation">
+                        <img src="./assets/img/experience.svg" alt="Image representing experience" width="100" height="100">
+                        <h4>Experience</h4>
+                    </li>
+                    <li id="tab-four" role="presentation">
+                        <img src="./assets/img/plans.svg" alt="Image representing future plans" width="100" height="100">
+                        <h4>Plans</h4>
+                    </li>
+                </ul>
+                <div class="tabs-content">
+                    <div id="tab-one-content-box" class="hideTabs" role="tabpanel" aria-labelledby="tab-one">
+                        <p>Salutations! Mashilo here, blending my chemistry roots with the ever-evolving world of technology. 
+                           My current journey? Delving into the intricacies of software engineering.</p>
+                        <hr>
+                    </div>
+                    <div id="tab-two-content-box" class="hideTabs" role="tabpanel" aria-labelledby="tab-one">
+                        <p>
+                            My academic foundation includes graduating in Chemistry from <a href="https://www.vut.ac.za/" target="_blank" rel="noreferrer" aria-label="Vaal University of Technology">Vaal University of Technology</a> in 2019.
+                            Currently, I am immersed in a Software Engineering Nanodegree program with <a href="https://www.alxafrica.com/" target="_blank" rel="noreferrer" aria-label="ALX Africa">ALX Africa</a>, supported by a prestigious <a href="https://mastercardfdn.org/" target="_blank" rel="noreferrer" aria-label="Mastercard Foundation">Mastercard Foundation Scholarship</a>.
+                            I embarked on this exciting learning adventure in April 2023, eager to enhance my skills and contribute meaningfully to the tech landscape.
+                        </p>
+                        
+                        <hr>
+                    </div>
+                    <div id="tab-three-content-box" class="hideTabs" role="tabpanel" aria-labelledby="tab-three">
+                        <div class="experience hideOnMobile">
+                            <p>I ventured into the professional world as a laboratory analyst from 2019 to 2023. This enriching experience equipped me with valuable insights and 
+                            practical knowledge in the field. Currently, my days are devoted to ALX Africa and personal study projects, allowing me to delve deeper into the intricacies of software engineering.</p>
+                            <p>I am passionate about self-learning and continuous growth. I embrace challenges that expand my skill set. My GitHub repositories showcase a variety of ALX and personal study projects, 
+                             reflecting my commitment to ongoing learning in software engineering. Feel free to explore my coding journey on <a href="https://github.com/1Mashilo/" target="_blank" rel="noreferrer" aria-label="Mashilo's GitHub Profile">GitHub</a>.</p>
+                            
+                        </div>
+                        <div class="grid-experience">
+                            <div class="experience">
+                                <p>
+                                    QC Lab Analyst at <a href="https://www.africasunoil.com/" target="_blank" rel="noreferrer" aria-label="Africa Sun Oil Refineries website">Africa Sun Oil Refineries</a>
+                                </p>
+                                <p>03/2022 - 04/2023</p>
+                            </div>
+                            <div class="experience">
+                                <p>
+                                    QC Lab Analyst at <a href="https://www.siqalofoods.com/" target="_blank" rel="noreferrer" aria-label="SIQALO FOODS website">SIQALO FOODS</a>
+                                </p>
+                                <p>04/2019 - 12/2021</p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div id="tab-four-content-box" class="hideTabs" role="tabpanel" aria-labelledby="tab-four">
+                        <p>Driven by a passion for backend development and data science, I am excited to make a positive impact in the world through technology. As I continue to explore new challenges and expand my skill set, my future plans include contributing meaningfully to the tech industry and creating innovative solutions. Join me on this exciting journey!</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Skills Section -->
+
+<section id="skills" role="region" aria-labelledby="skills-heading">
+    <div class="section-title">
+        <h1 data-aos="fade-down" id="skills-heading">Skills</h1>
+        <p data-aos="fade-up">Below are the main tools and technologies I use in my projects.</p>
+        <hr data-aos="fade-down">
+    </div>
+    <div class="knowledge-wrapper">
+        <!-- Python -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900">
+            <div class="knowledge-header">
+                <div class="knowledge-icons">
+                    <span class="iconify" data-icon="logos:python"></span>
+                </div>
+                <p>Proficient in Python, a versatile programming language used for various applications.</p>
+            </div>
+        </div>
+
+        <!-- C -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900" data-aos-delay="300">
+            <div class="knowledge-header">
+                <div class="knowledge-icons">
+                    <span class="iconify" data-icon="vscode-icons:file-type-c"></span>
+                </div>
+                <p>Skilled in C, a powerful programming language used for system-level programming.</p>
+            </div>
+        </div>
+
+        <!-- Django -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900" data-aos-delay="300">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip">
+                    <span class="iconify" data-icon="logos:django"></span>
+                </div>
+                <p>Experienced in Django, a high-level web framework written in Python.</p>
+            </div>
+        </div>
+
+        <!-- FastAPI -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900" data-aos-delay="500">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip">
+                    <span class="iconify" data-inline="false" data-icon="logos:fastapi"></span>
+                </div>
+                <p>Proficient in FastAPI, a modern, fast web framework for building APIs with Python 3.7+.</p>
+            </div>
+        </div>
+
+        <!-- Bootstrap -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900" data-aos-delay="500">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip">
+                    <span class="iconify" data-inline="false" data-icon="logos:bootstrap"></span>
+                </div>
+                <p>Skilled in Bootstrap, a popular CSS framework for building responsive and mobile-first websites.</p>
+            </div>
+        </div>
+
+        <!-- Git & GitHub -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900" data-aos-delay="950">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip">
+                    <span class="iconify" data-inline="false" data-icon="logos:git-icon"></span>
+                </div>
+                <p>Skilled in Git and GitHub for version control and collaborative development.</p>
+            </div>
+        </div>
+
+        <!-- Visual Studio Code -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900" data-aos-delay="600">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip">
+                    <span class="iconify" data-icon="vscode-icons:file-type-vscode"></span>
+                </div>
+                <p>Skilled in Visual Studio Code, a lightweight yet powerful source code editor.</p>
+            </div>
+        </div>
+
+        <!-- PostgreSQL -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900" data-aos-delay="900">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip">
+                    <span class="iconify" data-icon="logos:postgresql"></span>
+                </div>
+                <p>Experienced in PostgreSQL, an open-source relational database management system.</p>
+            </div>
+        </div>
+
+        <!-- Postman -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900" data-aos-delay="600">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip">
+                    <span class="iconify" data-icon="logos:postman"></span>
+                </div>
+                <p>Proficient in Postman, a collaboration platform for API development.</p>
+            </div>
+        </div>
+
+        <!-- Matplotlib -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900" data-aos-delay="600">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip">
+                    <span class="iconify" data-icon="logos:matplotlib"></span>
+                </div>
+                <p>Experienced in Matplotlib, a data visualization library in Python.</p>
+            </div>
+        </div>
+
+        <!-- Pandas -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900" data-aos-delay="600">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip">
+                    <span class="iconify" data-icon="logos:pandas"></span>
+                </div>
+                <p>Proficient in Pandas, a powerful data manipulation and analysis library in Python.</p>
+            </div>
+        </div>
+
+        <!-- Heroku -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip" data-aos-delay="600">
+                    <span class="iconify" data-icon="logos:heroku-icon"></span>
+                </div>
+                <p>Proficient in Heroku, a cloud platform for building, delivering, monitoring, and scaling apps.</p>
+            </div>
+        </div>
+
+        <!-- AWS -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip" data-aos-delay="600">
+                    <span class="iconify" data-icon="logos:aws"></span>
+                </div>
+                <p>Skilled in AWS (Amazon Web Services), a comprehensive cloud computing platform.</p>
+            </div>
+        </div>
+
+        <!-- PHP -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="900" data-aos-delay="600">
+            <div class="knowledge-header">
+                <div class="knowledge-icons" data-toggle="tooltip">
+                    <span class="iconify" data-icon="logos:php"></span>
+                </div>
+                <p>Experienced in PHP, a server-side scripting language for web development.</p>
+            </div>
+        </div>
+        <!-- Bash & Shell -->
+        <div class="knowledge" data-aos="fade-left" data-aos-duration="700" data-aos-delay="400">
+            <div class="knowledge-header">
+                <div class="knowledge-icons">
+                    <span class="iconify" data-icon="logos:bash"></span>
+                </div>
+                <p>Skilled in Bash and Shell scripting for automating tasks and system management.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" role="region" aria-labelledby="projects-heading">
+    <div class="projects container">
+        <div class="projects-header">
+            <h1 class="section-title" id="projects-heading">
+                <div data-aos="fade-down"><span>Personal</span> Projects</div>
+                <hr data-aos="fade-down">
+                <p data-aos="fade-right">The projects below have no employment affiliation.</p>
+                <hr data-aos="fade-down">
+                <p data-aos="fade-left">Click on the image to learn more about the respective project.</p>
+                <img
+                    data-aos="fade-down"
+                    data-aos-offset="200"
+                    data-aos-duration="1300"
+                    data-aos-easing="ease-in-sine"
+                    class="programmer"
+                    src="assets/img/programmer.svg"
+                    width="500"
+                    height="450"
+                    loading="lazy"
+                    alt="Image of Programmer"
+                >
+            </h1>
+        </div>
+
+        <!-- Swiper -->
+        <div class="all-projects" data-aos="zoom-in" data-aos-offset="500">
+            <div class="project-item">
+                <div class="project-info">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <!-- Project Simple Shell -->
+                            <div class="swiper-slide">
+                                <div class="wrapper">
+                                    <a href="https://github.com/1Mashilo/simple_shell" target="_blank" rel="noopener"
+                                        aria-label="Simple Shell">
+                                        <div class="carousel">
+                                            <figure
+                                                data-toggle="tooltip"
+                                                title="Simple Shell"
+                                                style="background: url('simple-shell.png'); background-size: cover; background-position: top center;"
+                                            >
+                                                <i>
+                                                    <span class="iconify" data-icon="ion:open-outline"></span>
+                                                </i>
+                                                <figcaption class="carousel-info">
+                                                    <h2>Simple Shell</h2>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Project Alien Invasion -->
+                            <div class="swiper-slide">
+                                <div class="wrapper">
+                                    <a href="https://github.com/1Mashilo/Alien-Invasion" target="_blank"
+                                        rel="noopener" aria-label="Alien-Invasion">
+                                        <div class="carousel">
+                                            <figure
+                                                data-toggle="tooltip"
+                                                title="Alien-Invasion"
+                                                style="background: url('Screenshot.png'); background-size: cover; background-position: top center;"
+                                            >
+                                                <i>
+                                                    <span class="iconify" data-icon="ion:open-outline"></span>
+                                                </i>
+                                                <figcaption class="carousel-info">
+                                                    <h2>Alien Invasion Game</h2>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Project Learning Log -->
+                            <div class="swiper-slide">
+                                <div class="wrapper">
+                                    <a href="https://github.com/1Mashilo/Learning_log" target="_blank"
+                                        rel="noopener" aria-label="Learning Log">
+                                        <div class="carousel">
+                                            <figure
+                                                data-toggle="tooltip"
+                                                title="Learning Log"
+                                                style="background: url('learning-log.png'); background-size: cover; background-position: top center;"
+                                            >
+                                                <i>
+                                                    <span class="iconify" data-icon="ion:open-outline"></span>
+                                                </i>
+                                                <figcaption class="carousel-info">
+                                                    <h2>Learning Log Project</h2>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Project Blog API -->
+                            <div class="swiper-slide">
+                                <div class="wrapper">
+                                    <a href="https://link-to-your-blog-api.com" target="_blank" rel="noopener"
+                                        aria-label="Blog API">
+                                        <div class="carousel">
+                                            <figure
+                                                data-toggle="tooltip"
+                                                title="Blog API"
+                                                style="background: #f0f0f0; text-align: center;"
+                                            >
+                                                <i>
+                                                    <span class="iconify" data-icon="ion:code-working"></span>
+                                                </i>
+                                                <figcaption class="carousel-info">
+                                                    <h2>Blog API</h2>
+                                                    <p>No user interface available</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Project 11 -->
+                            <div class="swiper-slide">
+                                <div class="wrapper">
+                                    <a href="https://random-quote-two.vercel.app" target="_blank" rel="noopener"
+                                        aria-label="Random Quote">
+                                        <div class="carousel">
+                                            <figure
+                                                data-toggle="tooltip"
+                                                title="Random Quote Generator"
+                                                style="background: url('https://res.cloudinary.com/dqjhiewf1/image/upload/v1644288960/fullPagePrint/random-quote_u3bdfl.webp'); background-size: cover; background-position: top center;"
+                                            >
+                                                <i>
+                                                    <span class="iconify" data-icon="ion:open-outline"></span>
+                                                </i>
+                                                <figcaption class="carousel-info">
+                                                    <h2>Random Quote</h2>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Projects Section -->
+
+
+    <!-- Certificate Section -->
+    <section id="certificates" role="region" aria-labelledby="certificates-heading">
+        <div class="certificates container">
+            <div class="certificate-header">
+                <h1 class="section-title" data-aos="fade-down" id="certificates-heading">Certificates</h1>
+                <hr data-aos="fade-down">
+                <p class="certificate-scroll" data-aos="fade-right"></p>
+            </div>
+            <div class="certificate" data-aos="fade-up" id="certificates-gallery">
+                <a href="aws-cloud.png"
+                    data-title="AWS cloud Quest" data-pswp-width="530" data-pswp-height="370">
+                    <img src="aws-cloud.png" width="200" height="150"
+                        loading="lazy" alt="aws cloud quest" data-aos="fade-up">
+                </a>
+                <a href="data-science.png"
+                    data-title="data science foundation" data-pswp-width="530" data-pswp-height="370">
+                    <img src="data-science.png" width="200" height="150" loading="lazy"
+                        alt="Data science Foundation Certificate" data-aos="fade-up">
+                </a>
+                <a href="excel.png" data-title="Git" data-pswp-width="530" data-pswp-height="370">
+                    <img src="excel.png" width="200" height="150" loading="lazy"
+                        alt="excel certificate" data-aos="fade-up">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End Certificate Section -->  
+
+    <!-- Form Section -->
+    <section id="form" role="region" aria-labelledby="form-heading">
+        <div class="form container">
+            <div class="form-header">
+                <h1 class="section-title" id="form-heading">
+                    <div data-aos="fade-down"><span>Contact</span> Personal</div>
+                    <hr data-aos="fade-down">
+                    <p data-aos="fade-left">Use the form below to send me an email for contact</p>
+                </h1>
+            </div>
+            <div class="my-form" data-aos="zoom-in-up">
+                <div class="row">
+                    <div class="col-12 text-center my-5">
+                        <h1 class="display-4">
+                            <i class="fa fa-paper-plane">
+                                <span class="iconify" data-icon="si-glyph:paper-plane" data-inline="false"></span>
+                            </i> Contact Form
+                        </h1>
+                    </div>
+                </div>
+    
+                <div class="row justify-content-center mb-5">
+                    <div class="col-sm-12 col-md-10 col-lg-8">
+                        <form action="https://getform.io/f/b103cef7-a5b3-4930-8d0b-4ad1a30cfbb4" method="POST"
+                            id="formContact" target="_blank">
+                            <div class="form-row">
+                                <!-- Name -->
+                                <div class="form-group col-sm-6">
+                                    <label for="nome">Your name</label>
+                                    <input autocomplete="off" type="text" class="form-control" name="nome" id="nome"
+                                        placeholder="Name">
+                                </div>
+                                <!-- Surname -->
+                                <div class="form-group col-sm-6">
+                                    <label for="sobrenome">Your surname</label>
+                                    <input autocomplete="off" type="text" class="form-control" name="sobrenome" id="sobrenome"
+                                        placeholder="Surname">
+                                </div>
+                                </div>
+                                <!-- End Name and Surname rows -->
+                                
+                                <div class="form-row">
+                                    <!-- Email -->
+                                    <div class="form-group col-sm-6">
+                                        <label for="email">Your email</label>
+                                        <input autocomplete="off" type="email" class="form-control" name="email" id="email"
+                                            placeholder="Email">
+                                    </div>
+                                
+                                    <div class="form-group col-sm-6">
+                                        <!-- Phone -->
+                                        <label for="celular">Your phone</label>
+                                        <input autocomplete="off" type="text" class="form-control" name="celular"
+                                            id="celular" placeholder="(00) 00000-0000">
+                                    </div>
+                                </div>
+                                <!-- End Email and Phone rows -->
+                                
+                                <div class="form-row">
+                                    <div class="form-group col-sm-12">
+                                        <!-- Message -->
+                                        <label for="mensagem">Your message</label>
+                                        <textarea autocomplete="off" class="form-control" name="mensagem" id="mensagem"
+                                            cols="30" rows="10" placeholder="Feel free"
+                                            onkeyup="countLetters();"></textarea>
+                                    </div>
+                                </div>
+                                <!-- End Message row -->
+                                <div class="form-row">
+                                    <div class="col-sm-12">
+                                        <input autocomplete="off" type="submit" class="btn btn-secondary form-control"
+                                            value="Send" id="btnSubmit" name="btnSubmit">
+                                    </div>
+                                    <div class="form-group col-sm-12">
+                                        <br>
+                                        <!-- Warning -->
+                                        <label>Total digits: <span class="count">0</span>
+                                            <p class="charLimit"></p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- End button and warning label row -->
+                                </form>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                </section>
+                                
+    <!-- End Form Section -->
+    <section id="cookies" class="cookies hide hideDown" role="region" aria-label="Cookies Information Section">
+        <div class="lgpd-information">
+            <p>
+                This site uses cookies to ensure you get the best experience.
+            </p>
+        </div>
+        <div class="lgpd-buttons">
+            <a class="private-policy" href="#">Privacy</a>
+            <button class="accept-policy">Accept</button>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="footer" role="contentinfo">
+        <div class="footer container">
+            <div class="brand" data-aos="fade-down">
+                <h1>Mashilo<span>Kgaladi</span></h1>
+            </div>
+            <h2 data-aos="fade-up" data-aos-duration="2500" data-aos-offset="0">Software Engineer</h2>
+            <div class="contact-icon">
+                <div class="contact-item text" data-toggle="tooltip" title="Sumaré - São Paulo">
+                    <div data-aos="fade-left" data-aos-offset="0">
+                        <a href="https://www.google.com/maps/search/22%C2%B048'16.6%22S+47%C2%B016'33.4%22W/@-22.8046061,-47.2785193,17z"
+                            target="_blank" rel="noreferrer noopener" aria-label="Google Maps">
+                            <span class="iconify globe-americas" data-icon="gis:earth-america" data-inline="false"></span>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="contact-item" data-toggle="tooltip" title="Contact me by email">
+                    <div data-aos="fade-up" data-aos-offset="0">
+                        <a href="mailto:christophermashilo@gmail.com?subject=Contact%20Website" rel="noreferrer"
+                            aria-label="Gmail">
+                            <span class="iconify envelope"
+                                data-icon="emojione-monotone:closed-mailbox-with-lowered-flag" data-inline="false"></span>
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="contact-item" data-toggle="tooltip" title="View my resume">
+                    <div data-aos="fade-right" data-aos-offset="0">
+                        <a href="resume.pdf" target="_blank" rel="noreferrer" aria-label="PDF Resume">
+                            <span class="iconify file-pdf" data-icon="bi:file-earmark-pdf-fill" data-inline="false"></span>
+                        </a>
+                    </div>
+                </div>
+                <a id="smoothScroll" href="#home" data-aos="fade-down" data-aos-offset="0">
+                    <span class="iconify arrow-up" data-icon="bytesize:chevron-top" data-inline="false"></span>
+                </a>
+            </div>
+            <p class="copy"></p>
+        </div>
+    </footer>
+    
+
+
+    <!-- End footer -->
+
+    <!-- Icons Script -->
+    <script defer src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+    <!-- Smooth Scroll Function -->
+    <script defer src="assets/js/smooth-scroll.js"></script>
+
+
+    <!-- Sweet -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js"
+        integrity="sha512-mULnawDVcCnsk9a4aG1QLZZ6rcce/jSzEGqUkeOLy0b6q0+T6syHrxlsAGH7ZVoqC93Pd0lBqd6WguPWih7VHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Aos Animate -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script defer src="assets/js/script.js"></script>
+    <script defer src="assets/js/jquery.easing.min.js"></script>
+    <script defer src="assets/js/theme.js"></script>
+
+    <!-- Swiper JS -->
+    <link rel="preload" href="https://unpkg.com/swiper/swiper-bundle.min.js" as="script">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        let swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+        });
+
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
+
+
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#certificates-gallery',
+            children: 'a',
+            zoomTitle: 'Ampliar',
+            downloadTitle: 'Baixar',
+            pswpModule: () => import('https://unpkg.com/photoswipe'),
+            bgOpacity: 0.9,
+            wheelToZoom: true,
+            arrowPrevTitle: 'Anterior',
+            arrowNextTitle: 'Próxima',
+            closeTitle: 'Fechar (Esc)',
+            errorMsg: 'Ocorreu um erro ao carregar a imagem.',
+            preLoader: false, 
+            mouseMovePan: true,
+            initialZoomLevel: 'fit',
+            secondaryZoomLevel: 1.5,
+            maxZoomLevel: 4,
+            allowPanToNext: true,
+            spacing: 0.5,
+            loop: false,
+            closeOnVerticalDrag: false,
+        });
+        
+        if(location.hostname.includes('.vercel.app')) {
+            const feedbackWidget = document.querySelector('#widget-422283');
+
+            if(document.body.contains(feedbackWidget) && !feedbackWidget.classList.contains('d-none')) {
+                lightbox.on('beforeOpen', () => {
+                    feedbackWidget.classList.add('d-none');
+                })
+            }
+
+            if(document.body.contains(feedbackWidget) && feedbackWidget.classList.contains('d-none')) {
+
+                lightbox.on('close', () => {
+                    feedbackWidget.style.display = 'block';
+                })
+            }
+            
+        }
+
+
+        lightbox.on('uiRegister', () => {
+            lightbox.pswp.ui.registerElement({
+                name: 'download',
+                order: 8,
+                isButton: true,
+                tagName: 'a',
+
+                html: {
+                    isCustomSVG: true,
+                    inner: '<path d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11l-5 5Zm-6 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20H6Z" id="pswp__icn-download"/>',
+                    outlineID: 'pswp__icn-download'
+                },
+
+                onInit: (el, pswp) => {
+                    el.setAttribute('download', '');
+                    el.setAttribute('target', '_blank');
+                    el.setAttribute('rel', 'noopener');
+                    el.style.marginTop = '.4rem';
+
+                    pswp.on('change', () => el.href = pswp.currSlide.data.src);
+                    
+                }
+            })
+            
+        })
+
+        lightbox.on('uiRegister', function () {
+                lightbox.pswp.ui.registerElement({
+                    name: 'custom-caption',
+                    order: 9,
+                    isButton: false,
+                    appendTo: 'root',
+                    html: 'Caption text',
+                    onInit: (el, pswp) => {
+                        lightbox.pswp.on('change', () => {
+                            const currSlideElement = lightbox.pswp.currSlide.data.element;
+                            let captionHTML = '';
+                            if (currSlideElement) {
+                                const hiddenCaption = currSlideElement.querySelector('.hidden-caption-content');
+                                if (hiddenCaption) {
+                                    // get caption from element with class hidden-caption-content
+                                    captionHTML = hiddenCaption.innerHTML;
+                                } else {
+                                    // get caption from alt attribute
+                                    captionHTML = currSlideElement.querySelector('img').getAttribute('alt');
+                                }
+                            }
+                            el.innerHTML = captionHTML || '';
+                        });
+                    }
+                });
+            });
+
+        lightbox.init();
+
+    </script>
+
+</body>
+
+</html>
