@@ -1,11 +1,10 @@
 // Helpers
 
 /**
- * Define atributos para um elemento DOM especificado.
- * @param {HTMLElement} el - O elemento DOM a ser modificado.
- * @param {Object.<string, string>} attrs - Um objeto que contém os atributos que serão setados no el
+ * Defines attributes for a specified DOM element.
+ * @param {HTMLElement} el - The DOM element to be modified.
+ * @param {Object.<string, string>} attrs - An object containing the attributes to be set on the el.
  */
-
 const setAttributesHelper = (el, attrs) => {
   for (let attr in attrs) {
     el.setAttribute(attr, attrs[attr]);
@@ -13,12 +12,11 @@ const setAttributesHelper = (el, attrs) => {
 };
 
 /**
- * Seleciona um ou vários elementos do DOM através do seletor
- * @param {string|HTMLElement} el - Uma string de seletores CSS ou o próprio elemento do DOM.
- * @param {boolean} [shouldSelectAll=false] - Uma flag que indica se deve retornar um ou vários elementos do DOM.
- * @returns {HTMLElement|NodeListOf<HTMLElement>} - O elemento DOM correspondente ou uma lista de elementos DOM correspondentes.
+ * Selects one or multiple elements from the DOM based on the selector.
+ * @param {string|HTMLElement} el - A CSS selector string or the actual DOM element.
+ * @param {boolean} [shouldSelectAll=false] - A flag indicating whether to return one or multiple DOM elements.
+ * @returns {HTMLElement|NodeListOf<HTMLElement>} - The corresponding DOM element or a list of corresponding DOM elements.
  */
-
 const selectElement = (el, shouldSelectAll = false) => {
   if (typeof el === 'string') {
     return shouldSelectAll
@@ -29,10 +27,10 @@ const selectElement = (el, shouldSelectAll = false) => {
 };
 
 /**
- * Adiciona, remove ou alterna a classe especificada em um elemento DOM.
- * @param {HTMLElement} el - O elemento DOM a ser modificado.
- * @param {string} className - A classe CSS a ser adicionada, removida ou alternada.
- * @param {string} action - A ação a ser executada: 'add' para adicionar, 'rem' para remover ou qualquer outro valor para alternar.
+ * Adds, removes, or toggles the specified CSS class on a DOM element.
+ * @param {HTMLElement} el - The DOM element to be modified.
+ * @param {string} className - The CSS class to be added, removed, or toggled.
+ * @param {string} action - The action to be performed: 'add' to add, 'rem' to remove, or any other value to toggle.
  */
 const handleClass = (el, className, action) => {
   action === 'add'
@@ -43,10 +41,10 @@ const handleClass = (el, className, action) => {
 };
 
 /**
- * Verifica se um elemento DOM especificado contém a classe CSS especificada.
- * @param {HTMLElement} el - O elemento DOM a ser verificado.
- * @param {string} className - A classe CSS a ser verificada.
- * @returns {boolean} - Verdadeiro se o elemento contiver a classe especificada, falso caso contrário.
+ * Checks if a specified DOM element contains the specified CSS class.
+ * @param {HTMLElement} el - The DOM element to be checked.
+ * @param {string} className - The CSS class to be checked.
+ * @returns {boolean} - True if the element contains the specified class, false otherwise.
  */
 const hasClass = (el, className) => el.classList.contains(className);
 
@@ -55,7 +53,7 @@ const typedTextSpan = selectElement('.typed-text'),
   home = selectElement('.home .container'),
   avatar = selectElement('.avatar');
 
-const textArray = ['Programador', 'Front End'],
+  const textArray = ['Software Engineer', 'Back End'];
   typingDelay = 50,
   erasingDelay = 50,
   newTextDelay = 2500;
