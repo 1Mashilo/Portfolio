@@ -78,31 +78,17 @@
     <link rel="preload" href="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/localization/messages_ptbr.js"
         as="script">
     <script defer src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/localization/messages_ptbr.js"></script>
-    <!-- Scripts need to be imported before </head> to resolve validation messages error -->
-    <link rel="canonical" href="https://silasrodrigues.vercel.app">
-
-    <!-- Hotjar Tracking Code for https://silasrodrigues.vercel.app -->
-    <script>
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-            h._hjSettings = { hjid: 3379066, hjsv: 6 };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script'); r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
 
 </head>
 
 <body ondragstart="false" class="body-theme">
-    <!-- Cabeçalho -->
+    <!-- Header -->
     <header id="header" aria-label="Site Header">
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
                     <a href="#home" class="scroll" rel="noreferrer">
-                        <img class="logo" src="./assets/img/logo.svg" srcset="./assets/img/logo-large.svg" alt="logo">
+                        <img class="logo" src="./assets/img/downnload.webp" srcset="./assets/img/downnload.webp" alt="logo">
                     </a>
                 </div>
                 <div class="nav-list">
@@ -849,11 +835,11 @@
             pswpModule: () => import('https://unpkg.com/photoswipe'),
             bgOpacity: 0.9,
             wheelToZoom: true,
-            arrowPrevTitle: 'Anterior',
-            arrowNextTitle: 'Próxima',
-            closeTitle: 'Fechar (Esc)',
-            errorMsg: 'Ocorreu um erro ao carregar a imagem.',
-            preLoader: false, 
+            arrowPrevTitle: 'Previous',
+            arrowNextTitle: 'Next',
+            closeTitle: 'Close (Esc)',
+            errorMsg: 'An error occurred while loading the image.',
+            preLoader: false,
             mouseMovePan: true,
             initialZoomLevel: 'fit',
             secondaryZoomLevel: 1.5,

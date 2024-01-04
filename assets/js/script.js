@@ -270,8 +270,9 @@ const certificateScroll = selectElement('.certificate-scroll');
 const isMobile = /Mobile/.test(navigator.userAgent);
 
 certificateScroll.innerHTML = isMobile
-  ? 'Pressione com o dedo e arraste para o lado'
-  : 'Utilize o scroll para rolagem lateral e clique na imagem para abrir';
+  ? 'Press with your finger and drag to the side'
+  : 'Use scroll for lateral scrolling and click on the image to open';
+
 
 menu_item.forEach((item) =>
   item.classList[isMobile ? 'remove' : 'add']('underline')
@@ -316,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const favicon = selectElement('#favicon');
   const pageTitle = document.title;
-  const attentionMessage = 'Volte para a página...';
+  const attentionMessage = 'Return to the page...';
 
   document.addEventListener('visibilitychange', () => {
     const isPageActive = !document.hidden;
@@ -335,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const copy = selectElement('.copy');
 
-copy.innerHTML = `Copyright &copy 2021 - ${new Date().getFullYear()} - Silas Rodrigues. Todos os direitos reservados`;
+copy.innerHTML = `Copyright &copy 2023 - ${new Date().getFullYear()} - Kgaladi Mashilo. All rights reserved`;
 
 const progressBar = selectElement('.progress-bar');
 
@@ -349,7 +350,7 @@ document.addEventListener('scroll', () => {
 });
 
 const currentDate = new Date();
-const myBirthDate = new Date('1999-04-22');
+const myBirthDate = new Date('1995-03-28');
 const age = selectElement('.age', true);
 let currentAge = currentDate.getFullYear() - myBirthDate.getFullYear();
 
@@ -379,8 +380,9 @@ if(!localStorage.lgpd) {
   
 
   formElements.forEach((el) => {
-    setAttributesHelper(el, { disabled: true, title: 'Desabilitado enquanto os temos de política de privacidade não forem aceitos' });
+    setAttributesHelper(el, { disabled: true, title: 'Disabled until privacy policy terms are accepted' });
   });
+  
 
 }
 
