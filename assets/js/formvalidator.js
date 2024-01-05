@@ -1,65 +1,78 @@
 jQuery(function ($) {
+  // Custom validation method for alphabets and spaces
   $.validator.addMethod('alphabetsnspace', function (value, element) {
     return this.optional(element) || /^[a-zA-ZÀ-ú' ]*$/.test(value);
-  }),
-    $.validator.addMethod('alphabetsnspace2', function (value, element) {
-      return this.optional(element) || /^[a-zA-Z-,-?0-9.' ]*$/.test(value);
-    }),
-    $('#formContact').validate({
-      rules: {
-        nome: {
-          alphabetsnspace: !0,
-          minlength: 2,
-          maxlength: 15,
-          required: !0,
-        },
-        sobrenome: {
-          required: !0,
-          minlength: 3,
-          maxlength: 20,
-          alphabetsnspace: !0,
-        },
-        email: {
-          required: !0,
-          email: !0,
-        },
-        celular: {
-          required: !0,
-          minlength: 15,
-        },
-        mensagem: {
-          alphabetsnspace2: !0,
-          required: !0,
-          maxlength: 1500,
-        },
-      },
-      messages: {
-        nome: {
-          required: 'Por favor, informe seu nome',
-          alphabetsnspace: 'Por favor, apenas letras',
-        },
-        sobrenome: {
-          required: 'Por favor, informe seu sobrenome',
-          alphabetsnspace: 'Por favor, apenas letras',
-        },
-        email: {
-          required: 'Por favor, informe seu e-mail para contato',
-        },
-        celular: {
-          required: 'Por favor, informe seu número de celular',
-          minlength: 'Por favor, insira 11 dígitos (somente números)',
-        },
-        mensagem: {
-          alphabetsnspace2: 'Por favor, não utilize caracteres especiais',
-        },
-      },
-    });
-}),
-  $('#celular').mask('(00) 00000-0000'),
-  $('#mensagem').keypress(function (e) {
-    let str = $(this).val();
-    ("'" != String.fromCharCode(e.which) &&
-      '<' != String.fromCharCode(e.which) &&
-      '>' != String.fromCharCode(e.which)) ||
-      (e.preventDefault(), $(this).val(str + ''));
   });
+
+  // Custom validation method for alphabets, spaces, hyphens, commas, question marks, numbers, and periods
+  $.validator.addMethod('alphabetsnspace2', function (value, element) {
+    return this.optional(element) || /^[a-zA-Z-,-?0-9.' ]*$/.test(value);
+  });
+
+  // Form validation rules
+  $('#formContact').validate({
+    rules: {
+      nome: {
+        alphabetsnspace: true,
+        minlength: 2,
+        maxlength: 15,
+        required: true,
+      },
+      sobrenome: {
+        required: true,
+        minlength: 3,
+        maxlength: 20,
+        alphabetsnspace: true,
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      celular: {
+        required: true,
+        minlength: 15,
+      },
+      mensagem: {
+        alphabetsnspace2: true,
+        required: true,
+        maxlength: 1500,
+      },
+    },
+    messages: {
+      nome: {
+        required: 'Please enter your name',
+        alphabetsnspace: 'Please use only letters',
+      },
+      sobrenome: {
+        required: 'Please enter your last name',
+        alphabetsnspace: 'Please use only letters',
+      },
+      email: {
+        required: 'Please enter your email for contact',
+      },
+      celular: {
+        required: 'Please enter your mobile number',
+        minlength: 'Please insert 11 digits (numbers only)',
+      },
+      mensagem: {
+        alphabetsnspace2: 'Please do not use special characters',
+      },
+    },
+  });
+});
+
+// Masking for the 'celular' input
+$('#celular').mask('(00) 00000-0000');
+
+// Restricting special characters in the 'mensagem' input
+$('#mensagem').keypress(function (e) {
+  let str = $(this).val();
+  if (
+    "'" != String.fromCharCode(e.which) &&
+    '<' != String.fromCharCode(e.which) &&
+    '>' != String.fromCharCode(e.which)
+  ) {
+    e.preventDefault();
+    $(this).val(str + '');
+  }
+});
