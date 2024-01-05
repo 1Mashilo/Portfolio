@@ -52,8 +52,9 @@
     user-select: none;
     width: 800px;
     height: auto;
-    min-height: 200px;
+    min-height: 300px;
     margin: 90px auto;
+    padding: 20px;
     background: 0 0;
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
