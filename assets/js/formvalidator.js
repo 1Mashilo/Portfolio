@@ -35,22 +35,22 @@ jQuery(function ($) {
       },
       messages: {
         nome: {
-          required: 'Por favor, informe seu nome',
-          alphabetsnspace: 'Por favor, apenas letras',
+          required: 'Please enter your name',
+          alphabetsnspace: 'Please use only letters',
         },
         sobrenome: {
-          required: 'Por favor, informe seu sobrenome',
-          alphabetsnspace: 'Por favor, apenas letras',
+          required: 'Please enter your surname',
+          alphabetsnspace: 'Please use only letters',
         },
         email: {
-          required: 'Por favor, informe seu e-mail para contato',
+          required: 'Please enter your email for contact',
         },
         celular: {
-          required: 'Por favor, informe seu número de celular',
-          minlength: 'Por favor, insira 11 dígitos (somente números)',
+          required: 'Please enter your mobile number',
+          minlength: 'Please enter 11 digits (numbers only)',
         },
         mensagem: {
-          alphabetsnspace2: 'Por favor, não utilize caracteres especiais',
+          alphabetsnspace2: 'Please do not use special characters',
         },
       },
     });
